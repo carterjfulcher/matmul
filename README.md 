@@ -3,7 +3,7 @@
 Can we make matmul fast?
 
 ## Naive Method 
-```python3 
+```python 
 def matmul(A: np.ndarray, B: np.ndarray) -> np.ndarray:
   # A is size m x n, B is size n x p. C (output) is size m x p. Multiply->Add
   assert A.shape[1] == B.shape[0]
@@ -16,7 +16,7 @@ def matmul(A: np.ndarray, B: np.ndarray) -> np.ndarray:
 ```
 
 ## Strassen Algorithm
-```python3 
+```python 
 def strassen_matmul(A: np.ndarray, B: np.ndarray) -> np.ndarray:
   A = [A[i:i+N//2, j:j+N//2] for i in range(0, N, N//2) for j in range(0, N, N//2)]
   B = [B[i:i+N//2, j:j+N//2] for i in range(0, N, N//2) for j in range(0, N, N//2)]
