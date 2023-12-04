@@ -21,7 +21,6 @@ def matmul(A: np.ndarray, B: np.ndarray) -> np.ndarray:
   for i in range(A.shape[0]):
     for j in range(B.shape[0]):
       C[i][j] = sum([A[i][k] * B[k][j] for k in range(n)])
-
   return C
 
 st = time.monotonic()
