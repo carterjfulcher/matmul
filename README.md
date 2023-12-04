@@ -4,6 +4,8 @@ Can we make matmul fast?
 
 ## Naive Method 
 
+Wow so slow! Approximately 25x slower than `@` operator in python
+
 ```python 
 def matmul(A: np.ndarray, B: np.ndarray) -> np.ndarray:
   # A is size m x n, B is size n x p. C (output) is size m x p. Multiply->Add
